@@ -1,0 +1,90 @@
+[
+  {
+    "model": "AMD Ryzen 5 7235HS                             ",
+    "speed": 3194,
+    "times": {
+      "user": 2757125,
+      "nice": 0,
+      "sys": 4882046,
+      "idle": 82873296,
+      "irq": 1269031
+    }
+  },
+  {
+    "model": "AMD Ryzen 5 7235HS                             ",
+    "speed": 3194,
+    "times": {
+      "user": 3110531,
+      "nice": 0,
+      "sys": 1873500,
+      "idle": 85528390,
+      "irq": 181953
+    }
+  },
+  {
+    "model": "AMD Ryzen 5 7235HS                             ",
+    "speed": 3194,
+    "times": {
+      "user": 4560421,
+      "nice": 0,
+      "sys": 2806140,
+      "idle": 83145843,
+      "irq": 181296
+    }
+  },
+  {
+    "model": "AMD Ryzen 5 7235HS                             ",
+    "speed": 3194,
+    "times": {
+      "user": 4302703,
+      "nice": 0,
+      "sys": 2672171,
+      "idle": 83537546,
+      "irq": 173187
+    }
+  },
+  {
+    "model": "AMD Ryzen 5 7235HS                             ",
+    "speed": 3194,
+    "times": {
+      "user": 3678859,
+      "nice": 0,
+      "sys": 2612375,
+      "idle": 84221187,
+      "irq": 179906
+    }
+  },
+  {
+    "model": "AMD Ryzen 5 7235HS                             ",
+    "speed": 3194,
+    "times": {
+      "user": 3504890,
+      "nice": 0,
+      "sys": 2625687,
+      "idle": 84381843,
+      "irq": 178656
+    }
+  },
+  {
+    "model": "AMD Ryzen 5 7235HS                             ",
+    "speed": 3194,
+    "times": {
+      "user": 3882328,
+      "nice": 0,
+      "sys": 2794875,
+      "idle": 83835218,
+      "irq": 172359
+    }
+  },
+  {
+    "model": "AMD Ryzen 5 7235HS                             ",
+    "speed": 3194,
+    "times": {
+      "user": 3920515,
+      "nice": 0,
+      "sys": 2828937,
+      "idle": 83762953,
+      "irq": 174953
+    }
+  }
+]

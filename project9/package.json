@@ -1,0 +1,17 @@
+{
+  "name": "project9",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon  index --quiet"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.1.10",
+    "readline-sync": "^1.4.10"
+  }
+}

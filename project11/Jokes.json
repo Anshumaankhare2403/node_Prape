@@ -1,0 +1,4 @@
+{
+  "type": "error",
+  "message": "Your ip has exceeded the 100 request limit per 15 minute(s). Try again in in 15 minute(s)."
+}
