@@ -1,5 +1,5 @@
 import express from 'express';
-import fs, { lstat } from 'fs';
+import fs from 'fs';
 import dotenv from 'dotenv';
 import connectionDB from './connection/connection.js';
 import router from './routes/blocRoutes.js';
