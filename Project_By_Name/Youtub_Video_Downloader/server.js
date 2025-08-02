@@ -8,7 +8,7 @@ import progress from "progress-stream";
 // Set FFmpeg path
 ffmpeg.setFfmpegPath("C:/Users/anshu/Downloads/ffmpeg-2025-07-23-git-829680f96a-full_build/ffmpeg-2025-07-23-git-829680f96a-full_build/bin/ffmpeg.exe");
 
-const videoURL = "https://www.youtube.com/watch?v=l9CZykYZkOQ&list=RDl9CZykYZkOQ&start_radio=1";
+const videoURL = "";
 
 async function downloadAndMerge() {
     try {
