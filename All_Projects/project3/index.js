@@ -40,44 +40,44 @@ app.get("/cars", async (req, res) => {
 })
 
 
-app.post("/cars",async (req,res)=>{
+app.post("/cars", async (req, res) => {
     const body = req.body
-    if(!body.id || !body.carName || !body.carVersion || !body.carColor || !body.carPrice){
-        res.status(400).json({massage:"Pleas enter an fildes" })
+    if (!body.id || !body.carName || !body.carVersion || !body.carColor || !body.carPrice) {
+        res.status(400).json({ massage: "Pleas enter an fildes" })
     }
     const adddb = await Cars.create({
-        id:body.id,
-        carName:body.carName,
-        carVersion:body.carVersion,
-        carColor:body.carColor,
-        carPrice:body.carPrice
+        id: body.id,
+        carName: body.carName,
+        carVersion: body.carVersion,
+        carColor: body.carColor,
+        carPrice: body.carPrice
     })
 
     console.log(adddb)
 
-    res.status(201).json({massage:'insertion successfull '})
+    res.status(201).json({ massage: 'insertion successfull ' })
 
 
 })
 
 app
-.route("/cars/:id")
-.patch(async (req,res)=>{
-    const uid = Number(req.params.id)
-    console.log("show UId",uid)
-    const data = req.body
-    const pdata = await Cars.findOneAndUpdate({id:uid},data,{new:true})
-    return res.status(201).json({Cars:pdata})
+    .route("/cars/:id")
+    .patch(async (req, res) => {
+        const uid = Number(req.params.id)
+        console.log("show UId", uid)
+        const data = req.body
+        const pdata = await Cars.findOneAndUpdate({ id: uid }, data, { new: true })
+        return res.status(201).json({ Cars: pdata })
 
-})
-.delete(async (req,res)=>{
-    const uid = Number(req.params.id)
-    console.log("show UId",uid)
-    const data = req.body
-    const pdata = await Cars.findOneAndDelete({id:uid})
-    return res.status(201).json({Cars:pdata})
+    })
+    .delete(async (req, res) => {
+        const uid = Number(req.params.id)
+        console.log("show UId", uid)
+        const data = req.body
+        const pdata = await Cars.findOneAndDelete({ id: uid })
+        return res.status(201).json({ Cars: pdata })
 
-})
+    })
 
 
 
