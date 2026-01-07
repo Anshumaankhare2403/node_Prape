@@ -14,7 +14,7 @@ function UserPage() {
   const handleUser = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/signin", {
+      const res = await axios.post("http://localhost:3000/api/auth/signup", {
         email,
         password,
       });
