@@ -22,15 +22,15 @@ function App() {
     <Router>
       {/* <Navbar />  */}
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/" element={<HomePage />} />
         <Route
-          path="/admin"
+          path="/ "
           element={
             <ProtectedRoute role="admin">
               <AdminPage />
             </ProtectedRoute>
           }
-        />
+        /> */}
         <Route path="/user" element={<UserPage />} />
         {/* <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
