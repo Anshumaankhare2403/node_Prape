@@ -63,8 +63,10 @@ async function handleTodoListUpdate(req,res) {
             return res.status(400).json({massage:"Title is require "});
         }
         const updataData = await TODO.findOneAndUpdate({title},{description,task});
-        
+        res.status(200).json({massage:"succssefuly updated ",updataData:updataData});
     } catch (error) {
+
+        res.status(500).json({massage:error.massage});
         
     }
 }
