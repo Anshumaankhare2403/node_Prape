@@ -56,6 +56,19 @@ async function handleTodoListDelete(req,res){
     }
 }
 
+async function handleTodoListUpdate(req,res) {
+    try {
+        const {title, description, task}  = req.body;
+        if(!title){
+            return res.status(400).json({massage:"Title is require "});
+        }
+        const updataData = await TODO.findOneAndUpdate({title},{description,task});
+        
+    } catch (error) {
+        
+    }
+}
+
 
 
 
