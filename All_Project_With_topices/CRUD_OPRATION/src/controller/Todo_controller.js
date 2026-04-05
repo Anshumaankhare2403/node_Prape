@@ -4,7 +4,9 @@ const TODO = require("../model/todo.schema.js");
 async function handleTodoList(req, res) {
     try {
         const { title, description, task } = req.body;
-
+        if(!title){
+            return res.status(404).json({massage:"title is not found"});
+        }
         const data = await TODO.create({
             title,
             description,
@@ -60,9 +62,15 @@ async function handleTodoListUpdate(req,res) {
     try {
         const {title, description, task}  = req.body;
         if(!title){
-            return res.status(400).json({massage:"Title is require "});
+            return res.status(404).json({massage:"Title is require "});
         }
-        const updataData = await TODO.findOneAndUpdate({title},{description,task});
+        const updatedfeilds = {};
+        if(description) updatedfeilds.description = description;
+        if(task) updatedfeilds.task = task;
+        const updataData = await TODO.findOneAndUpdate({title},updatedfeilds,{new:true,runValidators:true});
+        if(!updataData){
+            return res.status(404).json({massage:"TODO NOT Found "});
+        }
         res.status(200).json({massage:"succssefuly updated ",updataData:updataData});
     } catch (error) {
 
@@ -74,4 +82,4 @@ async function handleTodoListUpdate(req,res) {
 
 
 
-module.exports = { handleTodoList,handleTodoListget,handleTodoListDelete };
+module.exports = { handleTodoList,handleTodoListget,handleTodoListDelete,handleTodoListUpdate };
